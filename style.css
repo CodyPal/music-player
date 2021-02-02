@@ -1,4 +1,5 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
 
 html {
   box-sizing: border-box;
@@ -7,21 +8,39 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #c9ced3;
+  background-color: #676767;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 20 16'%3E%3Cg fill='%23403e43' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 .04C2.6.22 4.99 1.1 7 2.5A13.94 13.94 0 0 1 15 0h4c.34 0 .67.01 1 .04v2A12 12 0 0 0 7.17 12h5.12A7 7 0 0 1 20 7.07V14a5 5 0 0 0-3-4.58A5 5 0 0 0 14 14H0V7.07c.86.12 1.67.4 2.4.81.75-1.52 1.76-2.9 2.98-4.05C3.79 2.83 1.96 2.2 0 2.04v-2z'/%3E%3C/g%3E%3C/svg%3E");
+  color: salmon;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: 'Spartan', sans-serif;
   font-size: 12px;
+  
 }
 
-
+.player-container{
+  height: 500px;
+  width: 400px;
+  background-color: #242121;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
 
 .img-container {
-
+  height: 300px;
+  width: 300px;
   position: relative;
   top: -50px;
   left: 50px;
+}
+
+.img-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -40,20 +59,20 @@ h3 {
 
 /* Progress */
 .progress-container {
-  background: #fff;
+  background: rgb(150, 147, 147);
   border-radius: 5px;
   cursor: pointer;
   margin: 40px 20px;
-  height: 4px;
+  height: 5px;
   width: 90%;
 }
 
 .progress {
-  background: #242323;
+  background: salmon;
   border-radius: 5px;
   height: 100%;
   /* change this to show progress */
-  width: 66%;
+  width: 0%;
   transition: width 0.1s linear;
 }
 
@@ -74,11 +93,15 @@ h3 {
 
 .fas {
   font-size: 30px;
-  color: rgb(129, 129, 129);
+  color: rgb(207, 207, 207);
   margin-right: 30px;
-
+  cursor: pointer;
+  user-select: none;
 }
 
+.fas:hover{
+  filter: opacity(0.5)
+}
 
 
 .main-button {
@@ -89,6 +112,9 @@ h3 {
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
+  .player-container{
+    width: 95vw;
+  }
 
 
   .img-container {
